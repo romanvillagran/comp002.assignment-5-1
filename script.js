@@ -18,17 +18,19 @@ function primitiveMultiply(a, b) {
 
 function reliableMultiply(a, b) {
   // Your code here.
-
+  
+  //Infinite loop to keep trying until it succeeds
   while(true){
     try{
-
-      return primitiveMultiply(a,b);
+      //try calling primitiveMultiply to perform the multiplication
+      return primitiveMultiply(a,b); //this is the result if it succeeds
     }catch (e){
-
+      //Catch any error thrown by primitiveMultiply
       if(!(e instanceof MultiplicatorUnitFailure)){
-
+        // if there is an unexpected type, rethrow it
         throw e;
       }
+      //if the error is a MultiplicatorUnitFailure, then the loop will continue and retry
     }
   }
 }
