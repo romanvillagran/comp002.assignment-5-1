@@ -25,7 +25,7 @@ function reliableMultiply(a, b) {
       return primitiveMultiply(a,b);
     }catch (e){
 
-      if(!())
+      if(!(ewd))
     }
   }
 }
